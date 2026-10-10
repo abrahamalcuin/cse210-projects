@@ -3,10 +3,8 @@ using System.IO.Enumeration;
 
 public class Journal
 {
-
     public List<String> _journalEntries = new List<String>();
-    
-  
+
     public void DisplayAllEntries()
     {
         foreach (string entry in _journalEntries)
@@ -15,10 +13,8 @@ public class Journal
         }
     }
 
-        public void AddEntry(string userEntry)
+    public void AddEntry(string userEntry)
     {
-
-       _journalEntries.Add(userEntry);
+        _journalEntries.Add(userEntry);
     }
-   
 }

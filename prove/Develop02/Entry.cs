@@ -2,7 +2,6 @@ using System;
 
 public class Entry
 {
-    
     public string _dateToday;
     public string _journalPrompt;
     public string _journalEntry;
@@ -18,7 +17,6 @@ public class Entry
     public void GetUserEntry()
     {
         _journalEntry = Console.ReadLine();
-
     }
 
     public void SetPrompt(string prompt)
@@ -28,13 +26,6 @@ public class Entry
 
     public string StoreEntry()
     {
-        return ($"Date: {_dateToday} Prompt: {_journalPrompt} \nEntry: {_journalEntry}"); 
+        return ($"Date: {_dateToday} Prompt: {_journalPrompt} \nEntry: {_journalEntry}");
     }
-    
-
-
-
-    
-
 }
-
