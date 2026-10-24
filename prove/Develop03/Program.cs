@@ -8,9 +8,9 @@ class Program
 
         Scripture scripture1 = new Scripture(
             reference1,
-            "And we talk of Christ, we rejoice in Christ, we preach of Christ, "+
-            "we prophesy of Christ, and we write according to our prophecies that "+
-            "our children may know to what source they may look for a remission of "+
+            "And we talk of Christ, we rejoice in Christ, we preach of Christ, " +
+            "we prophesy of Christ, and we write according to our prophecies that " +
+            "our children may know to what source they may look for a remission of " +
             "their sins."
         );
 
@@ -18,10 +18,10 @@ class Program
 
         Scripture scripture2 = new Scripture(
             reference2,
-            "And when ye shall receive these things, I would exhort you that ye "+
-            "would ask God, the Eternal Father, in the name of Christ, if these "+
-            "things are not true; and if ye shall ask with a sincere heart, with "+
-            "real intent, having faith in Christ, he will manifest the truth of "+
+            "And when ye shall receive these things, I would exhort you that ye " +
+            "would ask God, the Eternal Father, in the name of Christ, if these " +
+            "things are not true; and if ye shall ask with a sincere heart, with " +
+            "real intent, having faith in Christ, he will manifest the truth of " +
             "it unto you, by the power of the Holy Ghost."
         );
 
@@ -36,8 +36,9 @@ class Program
             "all those whom he hath chosen, because of their faith, to make them mighty "+
             "even unto the power of deliverance."
         );
+// Exceeds requirements addition: Added a scripture bank that allows the user to pick from 3 scriptures as opposed to only 1.
 
-        ScriptureBank scriptureBank = new ScriptureBank([scripture1, scripture2, scripture3]);
+        ScriptureBank scriptureBank = new ScriptureBank([scripture1, scripture2, scripture3]); 
 
         Random random = new Random();
 
@@ -60,12 +61,12 @@ class Program
             else
             {
                 int wordsToHide = random.Next(1,3);
-                for (int i = 0; i< wordsToHide; i++)
+                for (int i = 0; i < wordsToHide; i++)
                 {
                     currentScripture.HideWord();
                 }
             }
-        }while(quitStatus == false && !currentScripture.IsAllHidden());
+        } while(quitStatus == false && !currentScripture.IsAllHidden());
 
         Console.Clear();
         Console.WriteLine(currentScripture.GetDisplayScripture());
