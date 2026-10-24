@@ -29,7 +29,7 @@ class Program
 
         Scripture scripture3 = new Scripture(
             reference3,
-            "And when the Jews heard these things they wer angry with him; yea, even "+
+            "And when the Jews heard these things they were angry with him; yea, even "+
             "as with the prophets of old, whom they had cast out, and stoned, and slain; "+
             "and they also sought his life, that they might take it away. But behold, "+
             "I, Nephi, will show unto you that the tender mercies of the Lord are over "+
@@ -60,13 +60,13 @@ class Program
 
             else
             {
-                int wordsToHide = random.Next(1,3);
+                int wordsToHide = random.Next(1, 3);
                 for (int i = 0; i < wordsToHide; i++)
                 {
                     currentScripture.HideWord();
                 }
             }
-        } while(quitStatus == false && !currentScripture.IsAllHidden());
+        } while (quitStatus == false && !currentScripture.IsAllHidden());
 
         Console.Clear();
         Console.WriteLine(currentScripture.GetDisplayScripture());
