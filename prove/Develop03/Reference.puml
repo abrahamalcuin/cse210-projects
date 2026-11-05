@@ -1,0 +1,12 @@
+@startuml
+class Reference {
+    - _chapter : string
+    - _book : string
+    - _singleVerse : string
+    - _startingVerse : string
+    - _endingVerse : string
+    + Reference(book:string, chapter:string, verse:string)
+    + Reference(book:string, chapter:string, startingVerse:string, endingVerse:string)
+    + GetReference() : string
+}
+@enduml

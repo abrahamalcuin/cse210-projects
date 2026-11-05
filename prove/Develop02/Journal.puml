@@ -1,0 +1,9 @@
+@startuml
+class Journal {
+    + DisplayAllEntries() : void
+    + AddEntry(userEntry:string) : void
+}
+class "List`1"<T> {
+}
+Journal o-> "_journalEntries<String>" "List`1"
+@enduml

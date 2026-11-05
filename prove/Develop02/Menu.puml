@@ -1,0 +1,18 @@
+@startuml
+class Menu {
+    - _menuOptions : string = """
+
+    Please select one of the following choices:
+    1. Write
+    2. Display
+    3. Save
+    4. Load
+    5. Startup Settings
+    6. Exit
+    What would you like to do? 
+    
+    """
+    + DisplayMenu() : void
+    + GetMenuSelection() : string
+}
+@enduml

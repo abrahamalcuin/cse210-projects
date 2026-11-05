@@ -1,0 +1,11 @@
+@startuml
+class Entry {
+    + _dateToday : string
+    + _journalPrompt : string
+    + _journalEntry : string
+    + SetDate() : void
+    + GetUserEntry() : void
+    + SetPrompt(prompt:string) : void
+    + StoreEntry() : string
+}
+@enduml

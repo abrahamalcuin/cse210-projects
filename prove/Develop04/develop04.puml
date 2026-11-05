@@ -1,0 +1,59 @@
+@startuml Develop04Diagram
+
+class Program{
+    Main()
+}
+
+class Activity{
+- _startingMessage: string
+- _activityName: string
+- _activityDescription: string
+- _finishedMessage: string
+- _activityDuration: int
+- _pauseDuration: int
+
++ Activity(activityName: string, activityDescription: string)
++ DisplayStartMessage() : void
++ DisplayFinishedMessage(): void
++ PromptForDuration(): int
++ GetDuration(): int
++ Pause(): void
++ Timer(): void
+}
+
+
+class BreathingActivity{
+- _breathInTime : int
+- _breathOutTime: int
++BreathingActivity(breathInTime: int, breathOutTime: int)
++BreathTimer(): void
+}
+
+class ReflectingActivity{
+-_questions: List<string>
+-_followUpQuestions: List<string>
++ReflectingActivity(questions: List<string>, followUpQuestions: List<string>)
++StartReflection(): void
++DisplayQuestion(): void
++DisplayFollowUpQuestion(): void
+}
+
+
+class ListingActivity{
+-_listing_prompts: List<string>
++ListingActivity(listing_prompts: List<string>)
++StartListing() : void
++PromptUser() : void
++GetEntryQuantity(): int
+
+}
+
+Activity <|-- ReflectingActivity
+Activity <|-- BreathingActivity
+Activity <|-- ListingActivity
+
+Program ..> BreathingActivity
+Program ..> ReflectingActivity
+Program ..> ListingActivity
+
+@enduml

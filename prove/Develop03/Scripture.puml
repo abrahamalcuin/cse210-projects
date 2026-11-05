@@ -1,0 +1,13 @@
+@startuml
+class Scripture {
+    + Scripture(reference:Reference, scripturetext:string)
+    + HideWord() : void
+    + IsAllHidden() : bool
+    + GetDisplayScripture() : string
+}
+class "List`1"<T> {
+}
+Scripture --> "_reference" Reference
+Scripture --> "_words<Word>" "List`1"
+Scripture o-> "_random" Random
+@enduml

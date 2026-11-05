@@ -1,0 +1,50 @@
+@startuml
+
+class Program{
+    Main()
+}
+class Scripture{
+    -reference: Reference
+    -words: List<Word>
+    +Scripture(reference: Reference)
+    +HideRandomWord(): void
+    +GetDisplayText(): string
+
+}
+class Word {
+    - _word : string
+    - _hiddenState : bool
+    + Word(word:string)
+    + GetWord() : string
+    + GetHiddenState() : bool
+    + Hide() : void
+    + GetDisplayWord() : string
+}
+
+class ScriptureBank {
+  -_scriptures: List<Scripture>
+  +ScriptureBank(scriptures: List<Scripture>)
+  +DisplayScriptureBank(): void
+  +GetScriptureChoice(): int
+  +GetScripture(userChoice: int): Scripture
+}
+
+class Reference {
+  -_book: string
+  -_chapter: string
+  -_singleVerse: string
+  -_startingVerse: string
+  -_endingVerse: string
+  +Reference(book: string, chapter: string, verse: string)
+  +Reference(book: string, chapter: string, startingVerse: string, endingVerse: string)
+  +GetReference(): string
+}
+
+ScriptureBank -->  Scripture 
+Scripture -->  Reference 
+Scripture *--  Word 
+
+Program ..> Reference 
+Program ..> Scripture 
+Program ..> ScriptureBank 
+@enduml

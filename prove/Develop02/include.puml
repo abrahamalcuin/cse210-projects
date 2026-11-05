@@ -1,0 +1,54 @@
+@startuml
+
+class Program{
+    Main()
+}
+class Journal{
+    _journalEntries: List<Entry>
+    +Journal(journalEntries)
+    +AddEntry(): void
+    +DisplayEntries(): void
+}
+
+class Entry{
+    -_dateToday: string
+    -_journalPrompt: string
+    -_journalEntry:string
+    Entry(dateToday: string, journalPrompt:string, journalEntry:string)
+    SetDate(): void
+    GetUserEntry(): string
+    DisplayEntry(): void
+
+}
+
+class PromptGenerator{
+    -_journalPrompts: List<string>
+    PromptGenerator(journalPrompts: List<string>)
+    GeneratePrompt():string
+
+}
+
+class Menu{
+    _menuPrompt:string
+    Menu(menuPrompt)
+    DisplayMenu():void
+    GetUserChoice(): int
+}
+
+class File{
+    _saveLocation
+    _loadLocation
+
+    File(saveLocation)
+    File(loadLocation)
+    SaveFile(): void
+    LoadFile(): void
+}
+
+Journal *-- Entry
+Program ..> Menu
+Program ..> Journal
+Program ..> PromptGenerator
+Program ..> File
+
+@enduml

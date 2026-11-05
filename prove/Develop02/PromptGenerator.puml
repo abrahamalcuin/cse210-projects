@@ -1,0 +1,8 @@
+@startuml
+class PromptGenerator {
+    + GeneratePrompt() : string
+}
+class "List`1"<T> {
+}
+PromptGenerator o-> "_journalPrompts<string>" "List`1"
+@enduml

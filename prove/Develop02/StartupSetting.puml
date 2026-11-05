@@ -1,0 +1,9 @@
+@startuml
+class StartupSettings {
+    - _startupFile : string
+    - _projectPath : string = @"C:\Users\abrah\OneDrive\Desktop\cse210-projects\prove\Develop02"
+    + TurnOnStartup() : void
+    + TurnOffStartup() : void
+    + IsStartupEnabled() : bool
+}
+@enduml

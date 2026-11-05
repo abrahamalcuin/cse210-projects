@@ -1,0 +1,11 @@
+@startuml
+class Word {
+    - _word : string
+    - _hiddenState : bool
+    + Word(word:string)
+    + GetWord() : string
+    + GetHiddenState() : bool
+    + Hide() : void
+    + GetDisplayWord() : string
+}
+@enduml

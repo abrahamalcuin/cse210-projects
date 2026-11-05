@@ -1,0 +1,6 @@
+@startuml
+class Files {
+    + SaveJournal(fileName:string, journal:Journal) : void
+    + LoadJournal(fileName:string, journal:Journal) : void
+}
+@enduml

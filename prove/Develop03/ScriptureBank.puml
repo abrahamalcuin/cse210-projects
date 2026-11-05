@@ -1,0 +1,11 @@
+@startuml
+class ScriptureBank {
+    + ScriptureBank(scriptures:List<Scripture>)
+    + DisplayScriptureBank() : void
+    + GetScriptureChoice() : int
+    + GetScripture(userChoice:int) : Scripture
+}
+class "List`1"<T> {
+}
+ScriptureBank --> "_scriptures<Scripture>" "List`1"
+@enduml
